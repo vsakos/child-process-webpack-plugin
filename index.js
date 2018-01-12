@@ -50,12 +50,16 @@ ChildProcessPlugin.prototype.apply = function (compiler) {
                 shell: true,
             });
 
-            const wrapper = new LineWrapper({
+            const wrapperOut = new LineWrapper({
                 prefix: proc.prefix,
             });
 
-            child.stdout.pipe(wrapper).pipe(process.stdout);
-            child.stderr.pipe(wrapper).pipe(process.stderr);
+            const wrapperErr = new LineWrapper({
+                prefix: proc.prefix,
+            });
+
+            child.stdout.pipe(wrapperOut).pipe(process.stdout);
+            child.stderr.pipe(wrapperErr).pipe(process.stderr);
         });
     });
 };
