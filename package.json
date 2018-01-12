@@ -1,0 +1,31 @@
+{
+  "name": "child-process-webpack-plugin",
+  "version": "0.0.1",
+  "description": "Webpack plugin to start background processes.",
+  "main": "index.js",
+  "scripts": {
+    "test": "webpack --config test/webpack.config.js",
+    "test:nodemon": "nodemon test/build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vsakos/child-process-webpack-plugin.git"
+  },
+  "author": "vsakos",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vsakos/child-process-webpack-plugin/issues"
+  },
+  "homepage": "https://github.com/vsakos/child-process-webpack-plugin#readme",
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "stream-line-wrapper": "^0.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.14.11",
+    "webpack": "^3.10.0"
+  },
+  "peerDependencies": {
+    "webpack": "^3.0.0"
+  }
+}
